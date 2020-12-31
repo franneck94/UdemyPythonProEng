@@ -1,0 +1,20 @@
+site_name: FastVector
+site_description: "This is a simple vector python package."
+
+theme:
+  name: "material"
+  palette:
+    primary: "blue"
+    accent: "grey"
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - "Start": index.md
+  - "API": api.md

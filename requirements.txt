@@ -1,0 +1,23 @@
+# Libraries
+loguru
+
+# Testing
+pytest
+codecov
+pytest-cov
+tox
+pre-commit
+pytest-benchmark
+
+# Linting
+flake8
+pylint
+mypy
+autopep8
+isort
+
+# Documentation
+mkdocs
+mkdocstrings
+mkdocs-material
+Pygments
