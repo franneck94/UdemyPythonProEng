@@ -1,21 +1,17 @@
-import numbers
-from functools import total_ordering
 from math import sqrt
-
+from functools import total_ordering
 
 @total_ordering
 class Vector2D:
     def __init__(self, x=0, y=0):
-        if isinstance(x,
-                      numbers.Real) and isinstance(y, numbers.Real):
+        if isinstance(x, float) and isinstance(y, float):  
             self.x = x
             self.y = y
         else:
-            raise TypeError(
-                'You must pass in int/float values for x and y!')
+            raise TypeError('You must pass in int/float values for x and y!')
 
     def __call__(self):
-        print('Calling the __call__ function!')
+        print("Calling the __call__ function!")
         return self.__repr__()
 
     def __repr__(self):
@@ -47,7 +43,7 @@ class Vector2D:
             return True
         else:
             return False
-
+        
     def __add__(self, other_vector):
         self.check_vector_types(other_vector)
         x = self.x + other_vector.x
@@ -60,21 +56,21 @@ class Vector2D:
             y = self.y - other_vector.y
             return Vector2D(x, y)
         except AttributeError as e:
-            print('AttributeError: {} was raised!'.format(e))
+            print("AttributeError: {} was raised!".format(e))
             return self
         except Exception as e:
-            print('Exception {}: {} was raised!'.format(type(e), e))
+            print("Exception {}: {} was raised!".format(type(e), e))
 
     def __mul__(self, other):
         if isinstance(other, Vector2D):
             return self.x * other.x + self.y * other.y
-        elif isinstance(other, numbers.Real):
+        elif isinstance(other, float):
             return Vector2D(self.x * other, self.y * other)
         else:
             raise TypeError('You must pass in a vector instance or an int/float number!')
 
     def __truediv__(self, other):
-        if isinstance(other, numbers.Real):
+        if isinstance(other, float):
             if other != 0.0:
                 return Vector2D(self.x / other, self.y / other)
             else:
