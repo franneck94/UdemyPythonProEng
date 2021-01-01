@@ -1,6 +1,3 @@
-# Libraries
-loguru
-
 # Testing
 pytest
 codecov
