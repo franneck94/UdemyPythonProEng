@@ -3521,7 +3521,6 @@ static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -3532,7 +3531,6 @@ static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -3706,7 +3704,6 @@ static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -3717,7 +3714,6 @@ static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -3891,7 +3887,6 @@ static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -3902,7 +3897,6 @@ static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -4076,7 +4070,6 @@ static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -4087,7 +4080,6 @@ static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -4261,7 +4253,6 @@ static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -4272,7 +4263,6 @@ static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -4446,7 +4436,6 @@ static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -4457,7 +4446,6 @@ static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -4631,7 +4619,6 @@ static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -4642,7 +4629,6 @@ static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -4816,7 +4802,6 @@ static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -4827,7 +4812,6 @@ static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -5001,7 +4985,6 @@ static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -5012,7 +4995,6 @@ static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;
@@ -5186,7 +5168,6 @@ static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):             # <<<<<<<<<<<<<<
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)
- *
  */
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_list_in);
   __pyx_t_2 = __pyx_t_1;
@@ -5197,7 +5178,6 @@ static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for idx in range(len(list_in)):
  *         list_out[idx] = min(max(list_in[idx], min_value), max_value)             # <<<<<<<<<<<<<<
- *
  */
     __pyx_t_4 = __pyx_v_max_value;
     __pyx_t_5 = __pyx_v_min_value;

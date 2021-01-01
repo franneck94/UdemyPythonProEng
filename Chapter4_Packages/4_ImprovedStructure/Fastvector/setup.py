@@ -1,4 +1,6 @@
 # python setup.py develop
+from Cython.Build import cythonize
+from setuptools import Extension
 from setuptools import setup
 
 
@@ -27,21 +29,32 @@ PYTHON_MAX_VERSION = '3.8'
 PYTHON_REQUIRES = f'>={PYTHON_MIN_VERSION}, <={PYTHON_MAX_VERSION}'
 
 INSTALL_REQUIRES = [
-    'numpy',
+    'numpy>=1.18',
     'scipy',
     'Cython'
 ]
 
 PACKAGES = [
     'fastvector',
-    'tests'
+    'tests',
+    'benchmarks'
 ]
+
+CYTHON_EXTENSION = [
+    Extension(
+        name='fastvector.cython_computations',
+        sources=['fastvector/cython_computations.pyx']
+    )
+]
+
+EXT_MODULES = cythonize(CYTHON_EXTENSION)
 
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
     long_description=README,
     packages=PACKAGES,
+    ext_modules=EXT_MODULES,
     python_requires=PYTHON_REQUIRES,
     install_requires=INSTALL_REQUIRES,
     author=AUTHOR,

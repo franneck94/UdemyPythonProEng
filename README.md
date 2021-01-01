@@ -6,6 +6,18 @@ This is the code of my Udemy course:
 You can buy the course from the 01.12.2020 bis zum 31.12.2020 for the current best price.
 [Link to the sale](https://www.udemy.com/course/fortgeschrittene-python-programmierung/?couponCode=FRANNECK_DEC_2020)
 
+### Course description
+
+The course covers advanced Python programming techniques.
+This means that the course is not intended for programming beginners.
+
+### Requirements
+
+❗ Variables and Data Types  
+❗ Logic and Conditions  
+❗ Functions and Classes  
+❗ Working with pip and external Packages (e.g. numpy)  
+
 ### The Course has the following Topics
 
 ☑️ The Coding guidelines and good practice programming (PEP8)  
