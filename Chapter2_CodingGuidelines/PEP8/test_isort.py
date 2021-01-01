@@ -4,25 +4,12 @@ import os
 import sys
 
 import numpy as np
+import pandas as pd
+import pylint
 
-from my_lib import Object
-from my_lib import Object2
-from my_lib import Object3
-from third_party import lib1
-from third_party import lib2
-from third_party import lib3
-from third_party import lib4
-from third_party import lib5
-from third_party import lib6
-from third_party import lib7
-from third_party import lib8
-from third_party import lib9
-from third_party import lib10
-from third_party import lib11
-from third_party import lib12
-from third_party import lib13
-from third_party import lib14
-from third_party import lib15
+from .my_lib import Object
+from .my_lib import Object2
+from .my_lib import Object4
 
 
 print('Hey')
