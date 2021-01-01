@@ -3,7 +3,7 @@
 This is the code of my Udemy course:
 *Python: Coding Guidelines, Testing and Packaging* by Jan Schaffranek.
 
-You can buy the course from the 01.12.2020 bis zum 31.12.2020 for the current best price.
+You can buy the course from Jan. 1st 2022 till Jan. 31st 2022 for the current best price.
 [Link to the sale](https://www.udemy.com/course/fortgeschrittene-python-programmierung/?couponCode=FRANNECK_DEC_2020)
 
 ### Course description
@@ -21,6 +21,7 @@ This means that the course is not intended for programming beginners.
 ### The Course has the following Topics
 
 ☑️ The Coding guidelines and good practice programming (PEP8)  
+☑️ The usage of Type Annotations and MyPy  
 ☑️ The usage of Debugging, Logging, Profiling, Timing and Unit Testing  
 ☑️ The creation of own Python packages  
 ☑️ The creation of a modern HTML documentation  
