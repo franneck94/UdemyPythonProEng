@@ -12,6 +12,8 @@ pylint
 mypy
 autopep8
 isort
+pydocstyle
+black
 
 # Documentation
 mkdocs

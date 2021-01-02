@@ -6,6 +6,14 @@ from functools import total_ordering
 @total_ordering
 class Vector2D:
     def __init__(self, x=0, y=0):
+        '''Create a vector2d object.
+
+        :param x: [description], defaults to 0
+        :type x: int, optional
+        :param y: [description], defaults to 0
+        :type y: int, optional
+        :raises TypeError: [description]
+        '''
         if isinstance(x, float) and isinstance(y, float):
             self.x = x
             self.y = y
@@ -26,6 +34,11 @@ class Vector2D:
         return bool(abs(self))
 
     def __abs__(self):
+        '''[summary]
+
+        :return: [description]
+        :rtype: [type]
+        '''
         return sqrt(pow(self.x, 2) + pow(self.y, 2))
 
     def check_vector_types(self, vector2):

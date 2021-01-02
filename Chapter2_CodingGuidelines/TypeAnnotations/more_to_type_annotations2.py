@@ -35,7 +35,7 @@ def append_value(value: int, my_list: Optional[List[int]] = None) -> List[int]:
     return my_list
 
 
-def iterate_over_dict(my_dict: Mapping[str, Union[int, float]]) -> None:
+def iterate_over_dict(my_dict: Dict[str, Union[int, float]]) -> None:
     for key, val in my_dict.items():
         print(key, val)
 
