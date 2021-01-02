@@ -2,6 +2,7 @@
 from math import sqrt
 from functools import total_ordering
 
+
 @total_ordering
 class Vector2D:
     def __init__(self, x=0, y=0):
@@ -11,7 +12,7 @@ class Vector2D:
         else:
             raise TypeError('You must pass in int/float values for x and y!')
 
-    def __call__(self):  
+    def __call__(self):
         print("Calling the __call__ function!")
         return self.__repr__()
 
@@ -55,7 +56,7 @@ class Vector2D:
             y = self.y - other_vector.y
             return Vector2D(x, y)
         except AttributeError as e:
-            print("AttributeError: {} was raised!".format(e))
+            print(f"AttributeError: {e} was raised!")
             return self
 
     def __mul__(self, other):

@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name
 from math import sqrt
 from functools import total_ordering
 
@@ -16,10 +17,10 @@ class Vector2D:
         return self.__repr__()
 
     def __repr__(self):
-        return 'vector.Vector2D({}, {})'.format(self.x, self.y)
+        return f'vector.Vector2D({self.x}, {self.y})'
 
     def __str__(self):
-        return '({}, {})'.format(self.x, self.y)
+        return f'({self.x}, {self.y})'
 
     def __bool__(self):
         return bool(abs(self))
@@ -35,15 +36,13 @@ class Vector2D:
         self.check_vector_types(other_vector)
         if self.x == other_vector.x and self.y == other_vector.y:
             return True
-        else:
-            return False
+        return False
 
     def __lt__(self, other_vector):
         self.check_vector_types(other_vector)
         if abs(self) < abs(other_vector):
             return True
-        else:
-            return False
+        return False
 
     def __add__(self, other_vector):
         self.check_vector_types(other_vector)
@@ -57,24 +56,19 @@ class Vector2D:
             y = self.y - other_vector.y
             return Vector2D(x, y)
         except AttributeError as e:
-            print("AttributeError: {} was raised!".format(e))
+            print(f"AttributeError: {e} was raised!")
             return self
-        except Exception as e:
-            print("Exception {}: {} was raised!".format(type(e), e))
 
     def __mul__(self, other):
         if isinstance(other, Vector2D):
             return self.x * other.x + self.y * other.y
-        elif isinstance(other, float):
+        if isinstance(other, float):
             return Vector2D(self.x * other, self.y * other)
-        else:
-            raise TypeError('You must pass in a vector instance or an int/float number!')
+        raise TypeError('You must pass in a vector instance or an int/float number!')
 
     def __truediv__(self, other):
         if isinstance(other, float):
             if other != 0.0:
                 return Vector2D(self.x / other, self.y / other)
-            else:
-                raise ValueError('You cannot divide by zero!')
-        else:
-            raise TypeError('You must pass in an int/float value!')
+            raise ValueError('You cannot divide by zero!')
+        raise TypeError('You must pass in an int/float value!')
