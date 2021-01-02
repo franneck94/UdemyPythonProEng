@@ -1,6 +1,7 @@
 from math import sqrt
 from functools import total_ordering
 
+
 @total_ordering
 class Vector2D:
     def __init__(self, x=0, y=0):
@@ -28,7 +29,8 @@ class Vector2D:
 
     def check_vector_types(self, vector2):
         if not isinstance(self, Vector2D) or not isinstance(vector2, Vector2D):
-            raise TypeError('You have to pass in two instances of the vector class!')
+            raise TypeError(
+                'You have to pass in two instances of the vector class!')
 
     def __eq__(self, other_vector):
         self.check_vector_types(other_vector)
@@ -43,7 +45,7 @@ class Vector2D:
             return True
         else:
             return False
-        
+
     def __add__(self, other_vector):
         self.check_vector_types(other_vector)
         x = self.x + other_vector.x
@@ -67,7 +69,8 @@ class Vector2D:
         elif isinstance(other, float):
             return Vector2D(self.x * other, self.y * other)
         else:
-            raise TypeError('You must pass in a vector instance or an int/float number!')
+            raise TypeError(
+                'You must pass in a vector instance or an int/float number!')
 
     def __truediv__(self, other):
         if isinstance(other, float):
