@@ -1,5 +1,6 @@
 '''Test code.
 '''
+# pylint: disable=import-error
 import cProfile
 import io
 import pstats
