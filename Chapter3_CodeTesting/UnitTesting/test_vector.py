@@ -2,7 +2,7 @@
 '''
 import unittest
 
-from vector import Vector2D
+from Chapter3_CodeTesting.UnitTesting.vector import Vector2D
 
 
 class VectorTests(unittest.TestCase):
