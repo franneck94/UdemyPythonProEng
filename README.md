@@ -3,8 +3,8 @@
 This is the code of my Udemy course:
 *Python: Coding Guidelines, Testing and Packaging* by Jan Schaffranek.
 
-You can buy the course from Jan. 1st 2022 till Jan. 31st 2022 for the current best price.
-[Link to the sale](https://www.udemy.com/course/fortgeschrittene-python-programmierung/?couponCode=FRANNECK_JAN_2021)
+The current coupon is: FRANNECK_JAN_2021.
+[Link to the sale](https://www.udemy.com/course/3741094/?couponCode=FRANNECK_JAN_2021)
 
 ### Course description
 

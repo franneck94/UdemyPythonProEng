@@ -4,9 +4,10 @@ import cProfile
 import io
 import pstats
 import random
+import sys
 from functools import wraps
 
-from vector import Vector2D
+from Chapter3_CodeTesting.Profiling.vector import Vector2D
 
 
 def profile(fn):
@@ -29,11 +30,12 @@ def test_addition_own_implementation():
     for _ in range(100_000):
         v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
         v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
-        c3 = v1 + v2  # noqa
+        v3 = v1 + v2  # noqa
 
 
-def main():
+def main() -> int:
     test_addition_own_implementation()
+    return sys.exit(0)
 
 
 if __name__ == '__main__':

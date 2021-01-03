@@ -1,54 +1,39 @@
 '''Test code.
 '''
-import random
-import time
-from functools import wraps
+import sys
 from timeit import Timer
 
-from vector import Vector2D
+import numpy as np
 
 
-def timing(fn):
-    @wraps(fn)
-    def timer(*args, **kwargs):
-        start_time = time.perf_counter()
-        fn_result = fn(*args, **kwargs)
-        end_time = time.perf_counter()
-        time_duration = end_time - start_time
-        print('Function {} took: {} s'.format(fn.__name__, time_duration))
-        return fn_result
-    return timer
+NUM_RUNS = 3
 
 
-@timing
-def test_addition_own_implementation():
-    for _ in range(100_000):
-        v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
-        v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
-        c3 = v1 + v2  # noqa
-
-
-def test_addition_standard_bib():
-    code_str = \
-        '''
+def test_addition_standard_bib() -> None:
+    code_str = (
+'''
 v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
 v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
-c3 = v1 + v2
+v3 = v1 + v2
 '''
-    import_str = \
-        '''
+    )
+    import_str = (
+'''
 import random
 from vector import Vector2D
 '''
+    )
     timer = Timer(code_str, setup=import_str)
-    print('Mean computation time: {}'.format(sum(timer.repeat(repeat=3, number=100_000)) / 3))
+    times = timer.repeat(repeat=NUM_RUNS, number=1)
+    times = [t * 1_000_000_000.0 for t in times]
+    mean_time = np.mean(times)
+    print(f'Times: {times}, Mean computation time: {mean_time}')
 
 
-def main():
-    print('Own timer implementation: ')
-    test_addition_own_implementation()
+def main() -> int:
     print('Standard lib timer implementation: ')
     test_addition_standard_bib()
+    return sys.exit(0)
 
 
 if __name__ == '__main__':

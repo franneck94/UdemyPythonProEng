@@ -2,7 +2,7 @@
 '''
 import sys
 
-from .vector import Vector2D
+from Chapter3_CodeTesting.Debugging.vector import Vector2D
 
 
 def main() -> int:
