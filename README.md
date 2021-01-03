@@ -22,10 +22,9 @@ This means that the course is not intended for programming beginners.
 
 ☑️ The Coding guidelines and good practice programming (PEP8)  
 ☑️ The usage of Type Annotations and MyPy  
-☑️ The usage of Debugging, Logging, Profiling, Timing and Unit Testing  
+☑️ The usage of Debugging, Profiling, Timing and Unit Testing  
 ☑️ The creation of own Python packages  
 ☑️ The creation of a modern HTML documentation  
-☑️ The usage of Cython in your Python package  
 ☑️ The usage of continouos integration tools  
 
 Step ahead in your Python career an join this course!
