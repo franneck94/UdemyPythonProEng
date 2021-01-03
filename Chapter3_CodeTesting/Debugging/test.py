@@ -1,9 +1,11 @@
 '''Test code.
 '''
-from vector import Vector2D
+import sys
+
+from .vector import Vector2D
 
 
-def main():
+def main() -> int:
     v1 = Vector2D(2, -2)
     print(v1)
     v2 = Vector2D(2, 3)
@@ -11,6 +13,8 @@ def main():
     v3 = v1 + v2
     print(v3)
     print('Hello world')
+
+    return sys.exit(0)
 
 
 if __name__ == '__main__':
