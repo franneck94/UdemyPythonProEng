@@ -1,4 +1,5 @@
 # python setup.py develop
+# python setup.py install
 from setuptools import setup
 
 
@@ -28,8 +29,7 @@ PYTHON_REQUIRES = f'>={PYTHON_MIN_VERSION}, <={PYTHON_MAX_VERSION}'
 
 INSTALL_REQUIRES = [
     'numpy',
-    'scipy',
-    'Cython'
+    'scipy'
 ]
 
 PACKAGES = [
