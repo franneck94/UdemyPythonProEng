@@ -34,10 +34,10 @@ class Vector2D:
         return bool(abs(self))
 
     def __abs__(self):
-        '''[summary]
+        '''This is a summary
 
-        :return: [description]
-        :rtype: [type]
+        :return: This is a return value description
+        :rtype: dtype
         '''
         return sqrt(pow(self.x, 2) + pow(self.y, 2))
 

@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 from typing import Callable
-from typing import Dict
 from typing import List
 from typing import Mapping
 from typing import Optional
 from typing import Union
+
+
+def foo(param: List[float]) -> None:
+    pass
 
 
 def expand_list(expander: int, values: List[int]) -> List[int]:
@@ -35,7 +38,7 @@ def append_value(value: int, my_list: Optional[List[int]] = None) -> List[int]:
     return my_list
 
 
-def iterate_over_dict(my_dict: Dict[str, Union[int, float]]) -> None:
+def iterate_over_dict(my_dict: Mapping[str, Union[int, float]]) -> None:
     for key, val in my_dict.items():
         print(key, val)
 

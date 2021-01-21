@@ -48,7 +48,7 @@ class VectorTests(unittest.TestCase):
         '''
         result = self.v3 / 5
         expected_result = Vector2D(0.5, -0.5)
-        self.assertNotEqual(result, expected_result)
+        self.assertEqual(result, expected_result)
 
 
 if __name__ == '__main__':

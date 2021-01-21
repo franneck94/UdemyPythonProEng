@@ -40,12 +40,12 @@ class Vector2D:
         return bool(abs(self))
 
     def __abs__(self):
-        '''[summary]
+        '''This is a summary
 
         Returns
         -------
-        float
-            Absolute value of the vector.
+        dtype
+            This is a description of the return value.
         '''
         return sqrt(pow(self.x, 2) + pow(self.y, 2))
 
