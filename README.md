@@ -3,9 +3,6 @@
 This is the code of my Udemy course:
 *Python: Coding Guidelines, Testing and Packaging* by Jan Schaffranek.
 
-The current coupon is: FRANNECK_JAN_2021.
-[Link to the sale](https://www.udemy.com/course/3741094/?couponCode=FRANNECK_JAN_2021)
-
 ### Course description
 
 The course covers advanced Python programming techniques.
