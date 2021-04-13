@@ -1,0 +1,23 @@
+# Runtime requirements
+--requirement requirements.txt
+
+# Testing
+pytest
+codecov
+pytest-cov
+pre-commit
+tox
+
+# Linting
+flake8
+pylint
+mypy
+autopep8
+isort
+black
+
+# Documentation
+mkdocs
+mkdocstrings
+mkdocs-material
+Pygments
