@@ -14,7 +14,7 @@ pylint
 mypy
 autopep8
 isort
-black
+black==21.4b0
 
 # Documentation
 mkdocs

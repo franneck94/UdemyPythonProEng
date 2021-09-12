@@ -16,7 +16,7 @@ mypy
 autopep8
 isort
 pydocstyle
-black
+black==21.4b0
 
 # Documentation
 mkdocs
