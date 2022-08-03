@@ -9,8 +9,6 @@
 !*/
 !.gitkeep
 !Makefile
-*.pptx
-*.pdf
 *.isorted
 *.zip
 
