@@ -1,17 +1,18 @@
 import sys
+import os
+import typing
 
-import numpy as np
-import pandas as pd
+import pylint
 
 from .my_lib import print_hello
 
 
 def my_function_with_many_params(
-    param1,
-    param2,
-    param3,
-    param4,
-    param5,
+    param1: int,
+    param2: tf.keras.optimizer.Optimzer,
+    param3: tf.keras.optimizer.Optimzer,
+    param4: tf.keras.optimizer.Optimzer,
+    param5: float,
     param6,
     param7,
     param8,
@@ -20,16 +21,15 @@ def my_function_with_many_params(
     return "Hello World!"
 
 
-user1 = "Jan"
-user2 = "Max"
-user3 = "Marcus"
+def main() -> None:
+    user1 = "Jan"
+    user2 = "Max"
+    user3 = "Marcus"
 
-my_list = [
-    user1,
-    user2,
-    user3
-]
+    my_list = [user1, user2, user3]
+
+    print_hello()
 
 
 if __name__ == "__main__":
-    print_hello()
+    main()

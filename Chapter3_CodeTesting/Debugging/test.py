@@ -1,9 +1,7 @@
-'''Test code.
-'''
 # pylint: disable=import-error
 import sys
 
-from Chapter3_CodeTesting.Debugging.vector import Vector2D
+from vector import Vector2D
 
 
 def main() -> int:

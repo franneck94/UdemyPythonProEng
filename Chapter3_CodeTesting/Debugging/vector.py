@@ -157,7 +157,8 @@ class Vector2D:
                 vector(or number) instance.
         '''
         if isinstance(other, Vector2D):
-            return self.x * other.x + self.y * other.y
+            result: float = self.x * other.x + self.y * other.y
+            return result
         elif isinstance(other, numbers.Real):
             return Vector2D(self.x * other, self.y * other)
         else:
