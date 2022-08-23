@@ -115,13 +115,13 @@ class Vector2D:
         return is_less_than
 
     def __add__(self, other_vector):
-        '''Returns the additon vector of the self and the other vector instance.
+        '''Returns the addition vector of the self and the other vector instance.
 
         Args:
             other_vector: Other vector instance (right-hand-side of the operator).
 
         Returns:
-            The additon vector of the self and the other vector instance.
+            The addition vector of the self and the other vector instance.
         '''
         self.check_vector_types(other_vector)
         x = self.x + other_vector.x
