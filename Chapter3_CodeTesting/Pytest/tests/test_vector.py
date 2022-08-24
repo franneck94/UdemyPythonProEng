@@ -15,6 +15,7 @@ V3 = Vector2D(2.5, -2.5)
         (V1, V2, Vector2D(-1, 1)),
         (V1, V3, Vector2D(2.5, -2.5)),
         (V3, V2, Vector2D(1.5, -1.5)),
+        (V3, V1, Vector2D(2.5, -2.5))
     )
 )
 def test_add(lhs: Vector2D, rhs: Vector2D, exp_res: Vector2D) -> None:
