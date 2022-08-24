@@ -73,13 +73,3 @@ def test_abs() -> None:
 def test_raises(x: Any, y: Any) -> None:
     with pytest.raises(TypeError):
         _ = Vector2D(x, y)
-
-
-def test_repr(capture_stdout: dict) -> None:
-    print(repr(Vector2D(1.0, 2.0)))
-    assert capture_stdout["stdout"] == "vector.Vector2D(1.0, 2.0)\n"
-
-
-def test_str(capture_stdout: dict) -> None:
-    print(str(Vector2D(1.0, 2.0)))
-    assert capture_stdout["stdout"] == "(1.0, 2.0)\n"
