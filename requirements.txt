@@ -8,6 +8,8 @@ pytest-cov
 tox
 pre-commit
 pytest-benchmark
+snakeviz
+pyinstrument
 
 # Linting
 flake8
@@ -16,7 +18,7 @@ mypy
 autopep8
 isort
 pydocstyle
-black==21.4b0
+black
 
 # Documentation
 mkdocs
