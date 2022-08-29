@@ -1,2 +1,1 @@
-def print_hello_world() -> None:
-    print("Hello World")
+from ._printing import print_hello_world
