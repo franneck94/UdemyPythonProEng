@@ -1,0 +1,27 @@
+ipython
+ipykernel
+
+# Testing
+pytest
+codecov
+pytest-cov
+tox
+pre-commit
+pytest-benchmark
+snakeviz
+pyinstrument
+
+# Linting
+flake8
+pylint
+mypy
+autopep8
+isort
+pydocstyle
+black
+
+# Documentation
+mkdocs
+mkdocstrings
+mkdocs-material
+Pygments
