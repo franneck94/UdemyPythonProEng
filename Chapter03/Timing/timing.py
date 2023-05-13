@@ -1,36 +1,56 @@
-'''Test code.
-'''
-import sys
+import random
+import time
+from functools import wraps
 from timeit import Timer
+from typing import Any
+from typing import Callable
 
-import numpy as np
+from vector import Vector2D
 
 
-NUM_RUNS = 3
+def timing(fn: Callable) -> Callable:
+    @wraps(fn)
+    def timer(*args: Any, **kwargs: Any) -> Any:
+        start_time = time.perf_counter()
+        fn_result = fn(*args, **kwargs)
+        end_time = time.perf_counter()
+        time_duration = end_time - start_time
+        print(f"Function {fn.__name__} took {time_duration:.6f}s")
+        return fn_result
+
+    return timer
 
 
-def test_addition_standard_bib() -> None:
-    code_str = '''
-v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
-v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
-v3 = v1 + v2
-'''
-    import_str = '''
+@timing
+def test_addition_own_implementation() -> None:
+    for _ in range(100_000):
+        v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
+        v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
+        r = v1 + v2  # noqa
+
+
+def test_addition_standard_lib() -> None:
+    import_str = """
 import random
 from vector import Vector2D
-'''
+"""
+
+    code_str = """
+v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
+v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
+r = v1 + v2  # noqa
+"""
+
     timer = Timer(code_str, setup=import_str)
-    times = timer.repeat(repeat=NUM_RUNS, number=1)
-    times = [t * 1_000_000_000.0 for t in times]
-    mean_time = np.mean(times)
-    print(f'Times: {times}, Mean computation time: {mean_time}')
+    num_runs = 10
+    mean_time = sum(timer.repeat(repeat=num_runs, number=100_000)) / num_runs
+    print(f"Mean computation time: {mean_time:.6f}s")
 
 
-def main() -> int:
-    print('Standard lib timer implementation: ')
-    test_addition_standard_bib()
-    return sys.exit(0)
+def main() -> None:
+    test_addition_own_implementation()
+    test_addition_standard_lib()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
