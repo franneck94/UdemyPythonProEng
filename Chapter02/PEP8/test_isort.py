@@ -3,15 +3,11 @@ from __future__ import absolute_import
 import os
 import sys
 
-import numpy as np
-import pandas as pd
+import numpy
+import pandas
 
-import pylint
-
-from .my_lib import Object
-from .my_lib import Object2
-from .my_lib import Object4
+from my_lib import Object, Object2, Object3, Object4, Object5, Object6
 
 
-print('Hey')
-print('yo')
+print("Hey")
+print("yo")
