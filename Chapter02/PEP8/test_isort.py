@@ -7,7 +7,6 @@ import numpy
 import pandas
 
 from my_lib import Object
-from my_lib import Object2
 from my_lib import Object3
 from my_lib import Object4
 from my_lib import Object5

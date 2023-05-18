@@ -1,78 +1,21 @@
-# pylint: disable=invalid-name
-from functools import total_ordering
-from math import sqrt
+import math, sys;
 
-
-@total_ordering
-class Vector2D:
-    def __init__(self, x=0, y=0):
-        if isinstance(x, float) and isinstance(y, float):
-            self.x = x
-            self.y = y
-        else:
-            raise TypeError("You must pass in int/float values for x and y!")
-
-    def __call__(self):
-        print("Calling the __call__ function!")
-        return self.__repr__()
-
-    def __repr__(self):
-        return f"vector.Vector2D({self.x}, {self.y})"
-
-    def __str__(self):
-        return f"({self.x}, {self.y})"
-
-    def __bool__(self):
-        return bool(abs(self))
-
-    def __abs__(self):
-        return sqrt(pow(self.x, 2) + pow(self.y, 2))
-
-    def check_vector_types(self, vector2):
-        if not isinstance(self, Vector2D) or not isinstance(vector2, Vector2D):
-            raise TypeError(
-                "You have to pass in two instances of the vector class!"
-            )
-
-    def __eq__(self, other_vector):
-        self.check_vector_types(other_vector)
-        if self.x == other_vector.x and self.y == other_vector.y:
-            return True
-        return False
-
-    def __lt__(self, other_vector):
-        self.check_vector_types(other_vector)
-        if abs(self) < abs(other_vector):
-            return True
-        return False
-
-    def __add__(self, other_vector):
-        self.check_vector_types(other_vector)
-        x = self.x + other_vector.x
-        y = self.y + other_vector.y
-        return Vector2D(x, y)
-
-    def __sub__(self, other_vector):
-        try:
-            x = self.x - other_vector.x
-            y = self.y - other_vector.y
-            return Vector2D(x, y)
-        except AttributeError as e:
-            print(f"AttributeError: {e} was raised!")
-            return self
-
-    def __mul__(self, other):
-        if isinstance(other, Vector2D):
-            return self.x * other.x + self.y * other.y
-        if isinstance(other, float):
-            return Vector2D(self.x * other, self.y * other)
-        raise TypeError(
-            "You must pass in a vector instance or an int/float number!"
-        )
-
-    def __truediv__(self, other):
-        if isinstance(other, float):
-            if other != 0.0:
-                return Vector2D(self.x / other, self.y / other)
-            raise ValueError("You cannot divide by zero!")
-        raise TypeError("You must pass in an int/float value!")
+def example1():
+    ####This is a long comment. This should be wrapped to fit within 72 characters.
+    some_tuple=(   1,2, 3,'a'  );
+    some_variable={'long':'Long code lines should be wrapped within 79 characters.',
+    'other':[math.pi, 100,200,300,9876543210,'This is a long string that goes on'],
+    'more':{'inner':'This whole logical line should be wrapped.',some_tuple:[1,
+    20,300,40000,500000000,60000000000000000]}}
+    return (some_tuple, some_variable)
+def example2(): return {'has_key() is deprecated':True}.has_key({'f':2}.has_key(''));
+class Example3(   object ):
+    def __init__    ( self, bar ):
+     #Comments should have a space after the hash.
+     if bar : bar+=1;  bar=bar* bar   ; return bar
+     else:
+                    some_string = """
+                       Indentation in multiline strings should not be touched.
+Only actual code should be reindented.
+"""
+                    return (sys.path, some_string)
