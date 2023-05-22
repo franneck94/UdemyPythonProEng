@@ -51,10 +51,10 @@ warn_unreachable = true
 
 [tool.ruff]
 select = ["F", "E"]
-extend-select = ["W", "I002", "B", "UP", "PLE", "PLW", "NPY", "RUF", "PD", "SIM", "PT"]
+extend-select = ["W", "I002", "B", "UP", "PLE", "PLW", "NPY", "RUF", "PD", "PT"]
 unfixable = ["NPY002"]
 ignore = ["I001"]
-fixable = ["E", "F", "W", "I", "B", "UP", "PLE", "PLW", "NPY", "RUF", "PD", "SIM", "PT"]
+fixable = ["E", "F", "W", "I", "B", "UP", "PLE", "PLW", "NPY", "RUF", "PD", "PT"]
 target-version = "py39"
 
 line-length = 80
