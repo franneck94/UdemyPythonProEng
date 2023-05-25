@@ -43,7 +43,7 @@ def iterate_over_dict(my_dict: Mapping[str, Union[int, float]]) -> None:
         print(key, val)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     values = [1, 2, 3]
     expand_ratio = 2
 
@@ -56,5 +56,5 @@ if __name__ == '__main__':
     my_list = append_value(3, my_list)
     print(my_list)
 
-    my_dict = {'Jan': 26, 'Peter': 32}
+    my_dict = {"Jan": 26, "Peter": 32}
     iterate_over_dict(my_dict)

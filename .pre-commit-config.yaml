@@ -17,8 +17,6 @@ repos:
         exclude: ^docs/
     -   id: nbqa-isort
         exclude: ^docs/
-    -   id: nbqa-ruff
-        exclude: ^docs/
 
 -   repo: https://github.com/MarcoGorelli/cython-lint
     rev: v0.15.0
@@ -37,9 +35,3 @@ repos:
     hooks:
     -   id: black
         exclude: ^docs/
-
--   repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.0.261'
-    hooks:
-    -   id: ruff
-        args: [ --fix, --exit-non-zero-on-fix ]

@@ -10,7 +10,7 @@ from typing import Union
 
 AllowedContainers = Union[List, Tuple, AbstractSet]
 
-T = TypeVar('T', int, float, complex)
+T = TypeVar("T", int, float, complex)
 Vec = Iterable[Tuple[T, T]]
 
 
@@ -26,7 +26,7 @@ def inner_product(v: Vec[T]) -> T:
 def main():
     l1 = [1, 2, 3]
     print_container_values(l1)
-    d1 = {'a': 1, 'b': 2}
+    d1 = {"a": 1, "b": 2}
     print_container_values(d1)
     t1 = (1, 2, 3)
     print_container_values(t1)
@@ -35,5 +35,5 @@ def main():
     print(inner_product(v1))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

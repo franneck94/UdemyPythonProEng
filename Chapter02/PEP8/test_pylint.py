@@ -2,6 +2,7 @@ import numbers
 from functools import total_ordering
 from math import sqrt
 
+
 @total_ordering
 class Vector2D:
     def __init__(self, x=0.0, y=0.0):

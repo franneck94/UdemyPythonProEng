@@ -1,3 +1,13 @@
+setuptools>=67.8.0
+
+# Linting/Tooling
+black>=23.3.0
+isort>=5.12.0
+mypy>=1.3.0
+pre-commit>=3.3.2
+ruff>=0.0.270
+pyright>=1.1.309
+
 ipython
 ipykernel
 
@@ -10,15 +20,6 @@ pre-commit
 pytest-benchmark
 snakeviz
 pyinstrument
-
-# Linting
-flake8
-pylint
-mypy
-autopep8
-isort
-pydocstyle
-black
 
 # Documentation
 mkdocs

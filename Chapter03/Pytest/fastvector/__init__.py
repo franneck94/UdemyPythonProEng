@@ -6,7 +6,6 @@ import numbers
 from functools import total_ordering
 from math import sqrt
 from typing import SupportsFloat
-from typing import Union
 
 
 @total_ordering
@@ -25,7 +24,7 @@ class Vector2D:
             self.x = x
             self.y = y
         else:
-            raise TypeError('You must pass in int/float value for x and y!')
+            raise TypeError("You must pass in int/float value for x and y!")
 
     def __repr__(self) -> str:
         """Return the vector representation.
@@ -33,7 +32,7 @@ class Vector2D:
         Returns:
             The representation of the vector.
         """
-        return f'vector.Vector2D({self.x}, {self.y})'
+        return f"vector.Vector2D({self.x}, {self.y})"
 
     def __str__(self) -> str:
         """The vector as a string.
@@ -41,7 +40,7 @@ class Vector2D:
         Returns:
             The vector as a string.
         """
-        return f'({self.x}, {self.y})'
+        return f"({self.x}, {self.y})"
 
     def __abs__(self) -> float:
         """Return the length (magnitude) of the vector.
@@ -76,7 +75,7 @@ class Vector2D:
             False, else.
         """
         if not isinstance(other_vector, Vector2D):
-            raise TypeError('You must pass in a Vector2D instance!')
+            raise TypeError("You must pass in a Vector2D instance!")
         return abs(self) < abs(other_vector)
 
     def __add__(self, other_vector: Vector2D) -> Vector2D:
@@ -89,7 +88,7 @@ class Vector2D:
             The addition vector of the self and the other vector.
         """
         if not isinstance(other_vector, Vector2D):
-            raise TypeError('You must pass in a Vector2D instance!')
+            raise TypeError("You must pass in a Vector2D instance!")
         x = self.x + other_vector.x
         y = self.y + other_vector.y
         return Vector2D(x, y)
@@ -104,14 +103,14 @@ class Vector2D:
             The subtraction vector of the self and the other vector.
         """
         if not isinstance(other_vector, Vector2D):
-            raise TypeError('You must pass in a Vector2D instance!')
+            raise TypeError("You must pass in a Vector2D instance!")
         x = self.x - other_vector.x
         y = self.y - other_vector.y
         return Vector2D(x, y)
 
     def __mul__(
-        self, other: Union[Vector2D, SupportsFloat]
-    ) -> Union[Vector2D, SupportsFloat]:
+        self, other: Vector2D | SupportsFloat
+    ) -> Vector2D | SupportsFloat:
         """Return the multiplication of self and the other vector/number.
 
         Args:
@@ -127,7 +126,7 @@ class Vector2D:
             result: SupportsFloat = self.x * other.x + self.y * other.y
             return result
         if not isinstance(other, numbers.Real):
-            raise TypeError('You must pass in an int/float!')
+            raise TypeError("You must pass in an int/float!")
         return Vector2D(self.x * other, self.y * other)
 
     def __truediv__(self, other: SupportsFloat) -> Vector2D:
@@ -144,5 +143,5 @@ class Vector2D:
             The multiplication of self and the other vector/number.
         """
         if not isinstance(other, numbers.Real):
-            raise TypeError('You must pass in an int/float!')
+            raise TypeError("You must pass in an int/float!")
         return Vector2D(self.x / other, self.y / other)

@@ -6,8 +6,7 @@ from math import sqrt
 @total_ordering
 class Vector2D:
     def __init__(self, x=0.0, y=0.0):
-        if isinstance(x, numbers.Real) \
-            and isinstance(y, numbers.Real):
+        if isinstance(x, numbers.Real) and isinstance(y, numbers.Real):
             self.x = x
             self.y = y
         else:
