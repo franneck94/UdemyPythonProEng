@@ -1,5 +1,5 @@
 [tool.black]
-target-version = ['py39']
+target-version = ['py310']
 line-length = 80
 skip-string-normalization = false
 skip-magic-trailing-comma = false
@@ -11,7 +11,7 @@ extend-exclude = '''
 '''
 
 [tool.isort]
-py_version = 39
+py_version = 310
 sections = [
     "FUTURE",
     "STDLIB",
@@ -32,11 +32,16 @@ known_third_party = [
     "seaborn",
     "numba",
     "gym",
-    "PyQt6",
     "PyQt5",
+    "PyQt6",
     "pyqtgraph",
     "torch",
-    "tqdm"
+    "tqdm",
+    "cv2",
+    "skimage",
+    "tensorcross",
+    "tensorflow_datasets",
+    "scikeras"
 ]
 known_first_party = []
 known_local_folder = []
@@ -54,7 +59,7 @@ skip_glob = [
 
 [tool.mypy]
 # Platform configuration
-python_version = "3.9"
+python_version = "3.10"
 # imports related
 ignore_missing_imports = true
 follow_imports = "silent"
@@ -91,13 +96,14 @@ strict_equality = true
 show_error_context = false
 show_column_numbers = false
 show_error_codes = true
+exclude = ["examples"]
 
 [tool.ruff]
-target-version = "py39"
+target-version = "py310"
 select = ["F", "E"]
-extend-select = ["W", "N", "UP", "B", "A", "C4", "PT", "SIM", "PD", "PLE", "RUF"]
+extend-select = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "B", "A", "C4", "DTZ", "FA", "ISC", "ICN", "PIE", "PYI", "PT", "RET", "SLOT", "SIM", "ARG", "PTH", "PD", "PLC", "PLE", "PLR", "PLW", "FLY", "NPY", "PERF", "RUF"]
 ignore = ["SIM300"]
-fixable = ["F", "E", "W", "UP", "B", "A", "C4"]
+fixable = ["F", "E", "W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "B", "A", "C4", "DTZ", "FA", "ISC", "ICN", "PIE", "PYI", "PT", "RET", "SLOT", "SIM", "ARG", "PTH", "PD", "PLC", "PLE", "PLR", "PLW", "FLY", "NPY", "PERF", "RUF"]
 unfixable = []
 line-length = 80
 extend-exclude = ["tests", "test"]
@@ -107,7 +113,7 @@ force-single-line = true
 force-sort-within-sections = false
 lines-after-imports = 2
 [tool.ruff.mccabe]
-max-complexity = 10
+max-complexity = 24
 [tool.ruff.pycodestyle]
 ignore-overlong-task-comments = true
 [tool.ruff.pydocstyle]
@@ -115,9 +121,14 @@ convention = "numpy"
 [tool.ruff.flake8-annotations]
 allow-star-arg-any = false
 ignore-fully-untyped = false
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [tool.pyright]
-pythonVersion = "3.9"
+pythonVersion = "3.10"
 typeCheckingMode = "basic"
 # enable subset of "strict"
 reportDuplicateImport = true
