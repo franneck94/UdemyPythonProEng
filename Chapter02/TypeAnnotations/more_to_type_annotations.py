@@ -1,20 +1,20 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from typing import AbstractSet
-from typing import Iterable
-from typing import List
-from typing import Tuple
+from typing import List  # noqa: F401
+from typing import Tuple  # noqa: F401
 from typing import TypeVar
 from typing import Union
 
 
-AllowedContainers = Union[List, Tuple, AbstractSet]
+AllowedContainers = Union[list, tuple, AbstractSet]
 
 T = TypeVar("T", int, float, complex)
-Vec = Iterable[Tuple[T, T]]
+Vec = Iterable[tuple[T, T]]
 
 
-def print_container_values(container: AllowedContainers):
+def print_container_values(container: AllowedContainers) -> None:
     for val in container:
         print(val)
 
@@ -26,8 +26,8 @@ def inner_product(v: Vec[T]) -> T:
 def main():
     l1 = [1, 2, 3]
     print_container_values(l1)
-    d1 = {"a": 1, "b": 2}
-    print_container_values(d1)
+    # d1 = {"a": 1, "b": 2}
+    # print_container_values(d1)
     t1 = (1, 2, 3)
     print_container_values(t1)
 

@@ -1,25 +1,25 @@
-import os
-import sys
-import typing
+import os  # noqa: F401
+import sys  # noqa: F401
+from typing import Any
 
 import tensorflow as tf
 
-import pylint
+import pylint  # noqa: F401
 
 from .my_lib import print_hello
 
 
-def my_function_with_many_params(
-    param1: int,
-    param2: tf.keras.optimizer.Optimzer,
-    param3: tf.keras.optimizer.Optimzer,
-    param4: tf.keras.optimizer.Optimzer,
-    param5: float,
-    param6,
-    param7,
-    param8,
-    param9,
-):
+def my_function_with_many_params(  # noqa: PLR0913
+    param1: int,  # noqa: ARG001
+    param2: tf.keras.optimizer.Optimzer,  # noqa: ARG001
+    param3: tf.keras.optimizer.Optimzer,  # noqa: ARG001
+    param4: tf.keras.optimizer.Optimzer,  # noqa: ARG001
+    param5: float,  # noqa: ARG001
+    param6: Any,  # noqa: ARG001
+    param7: Any,  # noqa: ARG001
+    param8: Any,  # noqa: ARG001
+    param9: Any,  # noqa: ARG001
+) -> str:
     return "Hello World!"
 
 

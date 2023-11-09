@@ -91,7 +91,7 @@ class Vector2D:
 
     def __truediv__(self, other):
         if isinstance(other, float):
-            if other != 0.0:
+            if other != 0.0:  # noqa: PLR2004
                 return Vector2D(self.x / other, self.y / other)
             raise ValueError("You cannot divide by zero!")
         raise TypeError("You must pass in an int/float value!")

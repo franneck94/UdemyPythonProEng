@@ -3,7 +3,7 @@ import sys
 
 
 def example1():
-    ####This is a long comment. This should be wrapped to fit within 72 characters.
+    ####This is a long comment. This should be wrapped to fit within 72 characters.  # noqa: E501
     some_tuple = (1, 2, 3, "a")
     some_variable = {
         "long": "Long code lines should be wrapped within 79 characters.",
@@ -27,16 +27,16 @@ def example2():
     return {"has_key() is deprecated": True}.has_key({"f": 2}.has_key(""))
 
 
-class Example3(object):
+class Example3:
     def __init__(self, bar):
         # Comments should have a space after the hash.
         if bar:
             bar += 1
             bar = bar * bar
-            return bar
-        else:
+            return bar  # noqa: RET504, PLE0101
+        else:  # noqa: RET505
             some_string = """
                        Indentation in multiline strings should not be touched.
 Only actual code should be reindented.
 """
-            return (sys.path, some_string)
+            return (sys.path, some_string)  # noqa: PLE0101

@@ -1,9 +1,9 @@
 import random
 import time
+from collections.abc import Callable
 from functools import wraps
 from timeit import Timer
 from typing import Any
-from typing import Callable
 
 from vector import Vector2D
 

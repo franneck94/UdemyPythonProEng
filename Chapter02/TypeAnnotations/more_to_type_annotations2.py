@@ -1,36 +1,36 @@
 from __future__ import annotations
 
-from typing import Callable
-from typing import List
-from typing import Mapping
+from collections.abc import Callable  # noqa: TCH003
+from collections.abc import Mapping  # noqa: TCH003
+from typing import List  # noqa: F401
 from typing import Optional
 from typing import Union
 
 
-def foo(param: List[float]) -> None:
+def foo(param: list[float]) -> None:  # noqa: ARG001
     pass
 
 
-def expand_list(expander: int, values: List[int]) -> List[int]:
+def expand_list(expander: int, values: list[int]) -> list[int]:
     return expander * values
 
 
-def print_list(values: List[int]) -> None:
+def print_list(values: list[int]) -> None:
     print(values)
 
 
 def expand_and_print(
-    values: List[int],
+    values: list[int],
     expand_ratio: int,
-    expand_fn: Callable[[int, List[int]], List[int]],
-    print_fn: Callable[[List[int]], None],
+    expand_fn: Callable[[int, list[int]], list[int]],
+    print_fn: Callable[[list[int]], None],
 ) -> None:
     values = expand_fn(expand_ratio, values)
     print_fn(values)
 
 
 # Optional[List[int]] <=> Union[List[int], None]
-def append_value(value: int, my_list: Optional[List[int]] = None) -> List[int]:
+def append_value(value: int, my_list: Optional[list[int]] = None) -> list[int]:
     if my_list:
         my_list.append(value)
     else:

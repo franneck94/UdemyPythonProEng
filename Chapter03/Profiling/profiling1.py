@@ -4,10 +4,10 @@ import cProfile
 import io
 import pstats
 import random
+from collections.abc import Callable
 from functools import wraps
 from pathlib import Path
 from typing import Any
-from typing import Callable
 
 from vector import Vector2D
 

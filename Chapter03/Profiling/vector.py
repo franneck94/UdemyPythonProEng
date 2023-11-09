@@ -161,7 +161,7 @@ class Vector2D:
         if isinstance(other, Vector2D):
             result: float = self.x * other.x + self.y * other.y
             return result
-        elif isinstance(other, numbers.Real):
+        elif isinstance(other, numbers.Real):  # noqa: RET505
             return Vector2D(self.x * other, self.y * other)
         else:
             raise TypeError(
@@ -182,9 +182,9 @@ class Vector2D:
             SupportsFloat: The multiplication of self and left vector or number.
         """
         if isinstance(other, numbers.Real):
-            if other != 0.0:
+            if other != 0.0:  # noqa: PLR2004
                 return Vector2D(self.x / other, self.y / other)
-            else:
+            else:  # noqa: RET505
                 raise ValueError("You cannot divide by zero!")
         else:
             raise TypeError("You must pass in an int/float value!")

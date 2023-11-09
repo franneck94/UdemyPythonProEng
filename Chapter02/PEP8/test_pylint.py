@@ -51,7 +51,7 @@ class Vector2D:
     def __mul__(self, other):
         if isinstance(other, Vector2D):
             result = self.x * other.x + self.y * other.y
-            return result
+            return result  # noqa: RET504
         if not isinstance(other, numbers.Real):
             raise TypeError("You must pass in an int/float!")
         return Vector2D(self.x * other, self.y * other)
