@@ -134,7 +134,6 @@ venv.bak/
 ################################
 ########### VS CODE ############
 ################################
-.vscode/settings.json
-.vscode/c_cpp_properties.json
+.vscode
 *.code-workspace
 .history

@@ -1,5 +1,6 @@
 """Test code.
 """
+
 from vector_type_annotations import Vector2D
 
 

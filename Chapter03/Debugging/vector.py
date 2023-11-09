@@ -1,5 +1,6 @@
 """Own implementation of a 2D vector class.
 """
+
 from __future__ import annotations
 
 import numbers
@@ -94,9 +95,12 @@ class Vector2D:
         """
         self.check_vector_types(other_vector)
         is_equal = False
-        if isinstance(other_vector, Vector2D):
-            if self.x == other_vector.x and self.y == other_vector.y:
-                is_equal = True
+        if (
+            isinstance(other_vector, Vector2D)
+            and self.x == other_vector.x
+            and self.y == other_vector.y
+        ):
+            is_equal = True
         return is_equal
 
     def __lt__(self, other_vector: Vector2D) -> bool:

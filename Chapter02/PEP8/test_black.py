@@ -3,7 +3,7 @@ import sys
 
 
 def example1():
-    ####This is a long comment. This should be wrapped to fit within 72 characters.  # noqa: E501
+    # This is a long comment. This should be wrapped to fit within 72 characters.  # noqa: E501
     some_tuple = (1, 2, 3, "a")
     some_variable = {
         "long": "Long code lines should be wrapped within 79 characters.",
