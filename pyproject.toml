@@ -64,7 +64,7 @@ filter_files = true
 target-version = "py310"
 select = ["F", "E"]
 extend-select = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF"]
-ignore = ["I001", "ANN401", "SIM300", "PERF203", "ANN101", "B905", "NPY002", "COM812", "N999", "PTH", "INP001", "TRY003", "PLW1641", "ANN", "UP035", "UP007"]
+ignore = ["I001", "ANN401", "SIM300", "PERF203", "ANN101", "B905", "NPY002", "COM812", "N999", "PTH", "INP001", "TRY003", "PLW1641"]
 fixable = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF"]
 unfixable = []
 line-length = 80
@@ -128,14 +128,7 @@ strict_equality = true
 show_error_context = false
 show_column_numbers = false
 show_error_codes = true
-exclude = [
-    "docs/*",
-    "test/*",
-    "tests/*",
-    "fastvector/*",
-    "main/*",
-    "my_package/*"
-]
+exclude = ["docs", "test", "tests"]
 
 [tool.pyright]
 pythonVersion = "3.10"
