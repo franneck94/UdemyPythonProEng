@@ -15,8 +15,8 @@ class Vector2D:
         """Create a instance with the given x and y values.
 
         Args:
-            x (SupportsFloat, optional): x-Value. Defaults to 0.
-            y (SupportsFloat, optional): y-Value. Defaults to 0.
+            x (float, optional): x-Value. Defaults to 0.
+            y (float, optional): y-Value. Defaults to 0.
 
         Raises:
             TypeError: If x or y are not a number.
@@ -148,14 +148,14 @@ class Vector2D:
         """Return the multiplication of self and left vector or number.
 
         Args:
-            other (Union[SupportsFloat, Vector2D]): Other instance or scaler
+            other (Union[float, Vector2D]): Other instance or scaler
                 value (rhs of the operator)
 
         Raises:
             TypeError: Not int/float passed in.
 
         Returns:
-            Union[SupportsFloat, Vector2D]: The multiplication of self and the
+            Union[float, Vector2D]: The multiplication of self and the
             other vector(or number) instance.
         """
         if isinstance(other, Vector2D):
@@ -178,7 +178,7 @@ class Vector2D:
             TypeError: Not int/float passed in.
 
         Returns:
-            SupportsFloat: The multiplication of self and left vector or number.
+            float: The multiplication of self and left vector or number.
         """
         if isinstance(other, float):
             if other != 0.0:  # noqa: PLR2004
