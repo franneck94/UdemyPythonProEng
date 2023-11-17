@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from collections.abc import Callable  # noqa: TCH003
-from collections.abc import Mapping  # noqa: TCH003
+from collections.abc import Callable
+from collections.abc import Mapping
 from typing import List  # noqa: F401
 from typing import Optional
 from typing import Union
