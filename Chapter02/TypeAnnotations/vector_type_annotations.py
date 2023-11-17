@@ -3,17 +3,15 @@
 
 from __future__ import annotations
 
-import numbers
 from functools import total_ordering
 from math import sqrt
-from typing import SupportsFloat
 
 
 @total_ordering
 class Vector2D:
     """Vector2D class to perform simple vector operations."""
 
-    def __init__(self, x: SupportsFloat = 0, y: SupportsFloat = 0) -> None:
+    def __init__(self, x: float = 0.0, y: float = 0.0) -> None:
         """Create a instance with the given x and y values.
 
         Args:
@@ -23,7 +21,7 @@ class Vector2D:
         Raises:
             TypeError: If x or y are not a number.
         """
-        if isinstance(x, numbers.Real) and isinstance(y, numbers.Real):
+        if isinstance(x, float) and isinstance(y, float):
             self.x = x
             self.y = y
         else:
@@ -146,9 +144,7 @@ class Vector2D:
         y = self.y - other_vector.y
         return Vector2D(x, y)
 
-    def __mul__(
-        self, other: SupportsFloat | Vector2D
-    ) -> SupportsFloat | Vector2D:
+    def __mul__(self, other: Vector2D | float) -> Vector2D | float:
         """Return the multiplication of self and left vector or number.
 
         Args:
@@ -164,14 +160,14 @@ class Vector2D:
         """
         if isinstance(other, Vector2D):
             return self.x * other.x + self.y * other.y
-        elif isinstance(other, numbers.Real):  # noqa: RET505
+        elif isinstance(other, float):  # noqa: RET505
             return Vector2D(self.x * other, self.y * other)
         else:
             raise TypeError(
                 "You must pass in a instance or an int/float number!"
             )
 
-    def __truediv__(self, other: SupportsFloat) -> Vector2D:
+    def __truediv__(self, other: float) -> Vector2D:
         """Return the multiplication of self and left vector or number.
 
         Args:
@@ -184,7 +180,7 @@ class Vector2D:
         Returns:
             SupportsFloat: The multiplication of self and left vector or number.
         """
-        if isinstance(other, numbers.Real):
+        if isinstance(other, float):
             if other != 0.0:  # noqa: PLR2004
                 return Vector2D(self.x / other, self.y / other)
             else:  # noqa: RET505
