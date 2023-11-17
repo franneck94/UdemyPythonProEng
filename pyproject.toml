@@ -68,12 +68,19 @@ ignore = ["I001", "ANN401", "SIM300", "PERF203", "ANN101", "B905", "NPY002", "CO
 fixable = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF"]
 unfixable = []
 line-length = 80
+indent-width = 4
 extend-exclude = ["docs", "test", "tests"]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+[tool.ruff.lint]
+preview = true
 [tool.ruff.isort]
 force-single-line = true
 force-sort-within-sections = false
 lines-after-imports = 2
+known-first-party = []
+known-local-folder = []
+known-third-party = []
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 [tool.ruff.mccabe]
 max-complexity = 24
 [tool.ruff.pycodestyle]
@@ -88,6 +95,7 @@ quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
+preview = false
 
 [tool.mypy]
 # Platform configuration

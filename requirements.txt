@@ -1,28 +1,8 @@
-setuptools>=67.8.0
-
-# Linting/Tooling
-black>=23.10.1
-isort>=5.12.0
-mypy>=1.6.1
-pre-commit>=3.5.0
-ruff>=0.1.3
-pyright>=1.1.333
-
 ipython
 ipykernel
 
-# Testing
-pytest
-codecov
-pytest-cov
 tox
-pre-commit
-pytest-benchmark
 snakeviz
 pyinstrument
 
-# Documentation
-mkdocs
-mkdocstrings
-mkdocs-material
-Pygments
+-r requirements-dev.txt
