@@ -119,7 +119,7 @@
     ],
     "errorLens.enabled": false,
     "[python]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnType": false
     },
