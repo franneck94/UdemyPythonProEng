@@ -25,8 +25,10 @@ class LoggedVar(Generic[T]):
 
 
 def main() -> None:
-    lv1 = LoggedVar(1, "Jan", Logger("a"))  # noqa
-    lv2 = LoggedVar(1.0, "Jan", Logger("b"))  # noqa
+    lv1 = LoggedVar(1, "Jan", Logger("a"))
+    lv2 = LoggedVar(1.0, "Jan", Logger("b"))
+    print(lv1)
+    print(lv2)
 
 
 if __name__ == "__main__":
