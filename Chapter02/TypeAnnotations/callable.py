@@ -5,15 +5,17 @@ from collections.abc import Callable
 
 def print_list(
     values: list[int],
+    verbose: bool = False,
 ) -> None:
-    print(values)
+    if verbose:
+        print(values)
 
 
 def function(
     values: list[int],
-    print_fn: Callable[[list[int]], None],
+    print_fn: Callable[[list[int], bool], None],
 ) -> None:
-    print_fn(values)
+    print_fn(values, True)
 
 
 def main() -> None:

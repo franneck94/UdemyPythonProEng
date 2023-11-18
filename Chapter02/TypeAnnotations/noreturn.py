@@ -11,9 +11,15 @@ def function2() -> NoReturn:
     sys.exit(-1)
 
 
+def function3() -> NoReturn:
+    print("Hello World")
+    raise ValueError
+
+
 def main() -> None:
     function1()
     function2()
+    function3()
 
 
 if __name__ == "__main__":
