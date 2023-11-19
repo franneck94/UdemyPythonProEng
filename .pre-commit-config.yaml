@@ -1,0 +1,39 @@
+default_language_version:
+  python: python3
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-toml
+
+-   repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.0
+    hooks:
+    -   id: nbqa-isort
+
+-   repo: https://github.com/MarcoGorelli/cython-lint
+    rev: v0.15.0
+    hooks:
+    -   id: cython-lint
+    -   id: double-quote-cython-strings
+
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.5
+    hooks:
+    -   id: ruff-format
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 'v0.1.5'
+    hooks:
+    -   id: ruff
+        types_or: [python, pyi, jupyter]
+        args: [ --fix, --exit-non-zero-on-fix ]

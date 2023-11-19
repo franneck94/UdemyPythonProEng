@@ -1,0 +1,8 @@
+ipython
+ipykernel
+
+tox
+snakeviz
+pyinstrument
+
+-r requirements-dev.txt
