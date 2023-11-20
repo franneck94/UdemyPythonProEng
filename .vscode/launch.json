@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "PyDebug: Current File 1",
+            "name": "PyDebug: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
