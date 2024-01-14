@@ -12,17 +12,11 @@ force-exclude = '''
 
 [tool.isort]
 py_version = 310
-sections = [
-    "FUTURE",
-    "STDLIB",
-    "THIRDPARTY",
-    "FIRSTPARTY",
-    "LOCALFOLDER"
-]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 default_section = "THIRDPARTY"
 known_third_party = []
 known_first_party = []
-known_local_folder = []
+known_local_folder = ["my_lib"]
 # style: black
 multi_line_output = 3
 include_trailing_comma = true
@@ -33,18 +27,124 @@ line_length = 80
 split_on_trailing_comma = true
 lines_after_imports = 2
 force_single_line = true
-skip_glob = [
-  "docs/*",
-  "setup.py"
-]
+skip_glob = ["docs/*", "setup.py"]
 filter_files = true
 
 [tool.ruff]
 target-version = "py310"
 select = ["F", "E"]
-extend-select = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF", "TRIO"]
-ignore = ["I001", "ANN401", "SIM300", "PERF203", "ANN101", "B905", "NPY002", "COM812", "N999", "PTH", "INP001", "TRY003", "PLW1641", "E203", "PLW1514"]
-fixable = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF", "TRIO"]
+extend-select = [
+    "W",
+    "C90",
+    "I",
+    "N",
+    "UP",
+    "YTT",
+    "ANN",
+    "ASYNC",
+    "BLE",
+    "B",
+    "A",
+    "COM",
+    "C4",
+    "EXE",
+    "FA",
+    "ISC",
+    "ICN",
+    "INP",
+    "PIE",
+    "PYI",
+    "PT",
+    "Q",
+    "RSE",
+    "RET",
+    "SLF",
+    "SLOT",
+    "SIM",
+    "TID",
+    "TCH",
+    "INT",
+    "ARG",
+    "PTH",
+    "TD",
+    "FIX",
+    "PD",
+    "PL",
+    "TRY",
+    "FLY",
+    "NPY",
+    "PERF",
+    "FURB",
+    "RUF",
+    "TRIO",
+]
+ignore = [
+    "I001",
+    "ANN401",
+    "SIM300",
+    "PERF203",
+    "ANN101",
+    "B905",
+    "NPY002",
+    "COM812",
+    "N999",
+    "PTH",
+    "INP001",
+    "TRY003",
+    "PLW1641",
+    "E203",
+    "PLW1514",
+    "UP",
+    "ANN204",
+    "ANN001",
+    "ANN201",
+    "TCH003",
+]
+fixable = [
+    "W",
+    "C90",
+    "I",
+    "N",
+    "UP",
+    "YTT",
+    "ANN",
+    "ASYNC",
+    "BLE",
+    "B",
+    "A",
+    "COM",
+    "C4",
+    "EXE",
+    "FA",
+    "ISC",
+    "ICN",
+    "INP",
+    "PIE",
+    "PYI",
+    "PT",
+    "Q",
+    "RSE",
+    "RET",
+    "SLF",
+    "SLOT",
+    "SIM",
+    "TID",
+    "TCH",
+    "INT",
+    "ARG",
+    "PTH",
+    "TD",
+    "FIX",
+    "PD",
+    "PL",
+    "TRY",
+    "FLY",
+    "NPY",
+    "PERF",
+    "FURB",
+    "RUF",
+    "TRIO",
+]
 unfixable = []
 line-length = 80
 indent-width = 4
@@ -64,7 +164,7 @@ section-order = [
     "standard-library",
     "third-party",
     "first-party",
-    "local-folder"
+    "local-folder",
 ]
 [tool.ruff.mccabe]
 max-complexity = 24

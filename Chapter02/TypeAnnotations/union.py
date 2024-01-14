@@ -1,11 +1,11 @@
 from typing import Union
 
 
-def function1(param: Union[int, float]) -> None:
+def function1(param: Union[int, float]) -> None:  # noqa: PYI041
     print(param)
 
 
-def function2(param: int | float | list) -> None:
+def function2(param: int | float | list) -> None:  # noqa: PYI041
     print(param)
 
 
