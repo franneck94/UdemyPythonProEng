@@ -9,7 +9,7 @@ def print_3d_tuple(
 
 
 def print_nd_int_tuple(
-    tpl: tuple[Union[int, float], ...],
+    tpl: tuple[Union[int, float], ...],  # noqa: UP007
 ) -> None:
     for val in tpl:
         print(val)

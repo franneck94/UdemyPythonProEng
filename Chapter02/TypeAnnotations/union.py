@@ -1,7 +1,7 @@
 from typing import Union
 
 
-def function1(param: Union[int, float]) -> None:  # noqa: PYI041
+def function1(param: Union[int, float]) -> None:  # noqa: PYI041, UP007
     print(param)
 
 
