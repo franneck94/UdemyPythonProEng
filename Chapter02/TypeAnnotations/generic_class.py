@@ -12,7 +12,7 @@ class LoggedVar(Generic[T]):
         self.logger = logger
         self.value = value
 
-    def set(self, new: T) -> None:  # noqa
+    def set(self, new: T) -> None:
         self.log("Set " + repr(self.value))
         self.value = new
 
