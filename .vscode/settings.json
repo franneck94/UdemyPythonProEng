@@ -81,7 +81,8 @@
     },
     "[toml]": {
         "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 80
+        "editor.wordWrapColumn": 80,
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
     "better-comments.tags": [
         {

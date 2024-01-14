@@ -19,29 +19,8 @@ sections = [
     "FIRSTPARTY",
     "LOCALFOLDER"
 ]
-default_section = "FIRSTPARTY"
-known_third_party = [
-    "numpy",
-    "pandas",
-    "keras",
-    "tensorflow",
-    "sklearn",
-    "matplotlib",
-    "scipy",
-    "h5py",
-    "seaborn",
-    "numba",
-    "gym",
-    "PyQt5",
-    "PyQt6",
-    "pyqtgraph",
-    "torch",
-    "tqdm",
-    "cv2",
-    "skimage",
-    "tensorcross",
-    "tensorflow_datasets"
-]
+default_section = "THIRDPARTY"
+known_third_party = []
 known_first_party = []
 known_local_folder = []
 # style: black
@@ -63,9 +42,9 @@ filter_files = true
 [tool.ruff]
 target-version = "py310"
 select = ["F", "E"]
-extend-select = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF"]
-ignore = ["I001", "ANN401", "SIM300", "PERF203", "ANN101", "B905", "NPY002", "COM812", "N999", "PTH", "INP001", "TRY003", "PLW1641"]
-fixable = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF"]
+extend-select = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF", "TRIO"]
+ignore = ["I001", "ANN401", "SIM300", "PERF203", "ANN101", "B905", "NPY002", "COM812", "N999", "PTH", "INP001", "TRY003", "PLW1641", "E203", "PLW1514"]
+fixable = ["W", "C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "B", "A", "COM", "C4", "EXE", "FA", "ISC", "ICN", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "PD", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "RUF", "TRIO"]
 unfixable = []
 line-length = 80
 indent-width = 4
@@ -80,7 +59,13 @@ lines-after-imports = 2
 known-first-party = []
 known-local-folder = []
 known-third-party = []
-section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder"
+]
 [tool.ruff.mccabe]
 max-complexity = 24
 [tool.ruff.pycodestyle]
@@ -96,6 +81,7 @@ indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
 preview = false
+docstring-code-format = true
 
 [tool.mypy]
 # Platform configuration
@@ -146,7 +132,7 @@ reportDuplicateImport = true
 reportInvalidStubStatement = true
 reportOverlappingOverload = true
 reportPropertyTypeMismatch = true
-reportUntypedClassDecorator = true
+reportUntypedClassDecorator = false
 reportUntypedFunctionDecorator = true
 reportUntypedNamedTuple = true
 reportUnusedImport = true
@@ -160,3 +146,4 @@ reportOptionalOperand = true
 reportOptionalSubscript = true
 reportPrivateImportUsage = true
 reportUnboundVariable = true
+exclude = ["docs", "setup.py"]

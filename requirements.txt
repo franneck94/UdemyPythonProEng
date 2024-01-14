@@ -1,8 +1,4 @@
-ipython
-ipykernel
+-r requirements-dev.txt
 
-tox
 snakeviz
 pyinstrument
-
--r requirements-dev.txt
