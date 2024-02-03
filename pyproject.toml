@@ -32,119 +32,19 @@ filter_files = true
 
 [tool.ruff]
 target-version = "py310"
-select = ["F", "E"]
-extend-select = [
-    "W",
-    "C90",
-    "I",
-    "N",
-    "UP",
-    "YTT",
-    "ANN",
-    "ASYNC",
-    "BLE",
-    "B",
-    "A",
-    "COM",
-    "C4",
-    "EXE",
-    "FA",
-    "ISC",
-    "ICN",
-    "INP",
-    "PIE",
-    "PYI",
-    "PT",
-    "Q",
-    "RSE",
-    "RET",
-    "SLF",
-    "SLOT",
-    "SIM",
-    "TID",
-    "TCH",
-    "INT",
-    "ARG",
-    "PTH",
-    "TD",
-    "FIX",
-    "PD",
-    "PL",
-    "TRY",
-    "FLY",
-    "NPY",
-    "PERF",
-    "FURB",
-    "RUF",
-    "TRIO",
-]
-ignore = [
-    "PTH",
-    "ANN204",
-    "ANN001",
-    "ANN101",
-    "ANN201",
-    "TCH003",
-    "TRY003",
-    "INP001",
-    "ANN401",
-    "COM812",
-    "PLW1641",
-    "N999",
-]
-fixable = [
-    "W",
-    "C90",
-    "I",
-    "N",
-    "UP",
-    "YTT",
-    "ANN",
-    "ASYNC",
-    "BLE",
-    "B",
-    "A",
-    "COM",
-    "C4",
-    "EXE",
-    "FA",
-    "ISC",
-    "ICN",
-    "INP",
-    "PIE",
-    "PYI",
-    "PT",
-    "Q",
-    "RSE",
-    "RET",
-    "SLF",
-    "SLOT",
-    "SIM",
-    "TID",
-    "TCH",
-    "INT",
-    "ARG",
-    "PTH",
-    "TD",
-    "FIX",
-    "PD",
-    "PL",
-    "TRY",
-    "FLY",
-    "NPY",
-    "PERF",
-    "FURB",
-    "RUF",
-    "TRIO",
-]
-unfixable = []
 line-length = 80
 indent-width = 4
 extend-exclude = ["docs", "test", "tests"]
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 [tool.ruff.lint]
+select = ["F", "E"]
+extend-select = ["C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "TRIO", "S", "BLE", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "PD", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FURB", "LOG", "RUF"]
+ignore = ["ANN101", "ANN102", "I001", "NPY002", "INP001", "TRY003", "ISC001", "COM812"]
+fixable = ["C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "TRIO", "S", "BLE", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "PD", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FURB", "LOG", "RUF"]
+
+unfixable = []
 preview = true
-[tool.ruff.isort]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+[tool.ruff.lint.isort]
 force-single-line = true
 force-sort-within-sections = false
 lines-after-imports = 2
@@ -158,13 +58,13 @@ section-order = [
     "first-party",
     "local-folder",
 ]
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 24
-[tool.ruff.pycodestyle]
+[tool.ruff.lint.pycodestyle]
 ignore-overlong-task-comments = true
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "numpy"
-[tool.ruff.flake8-annotations]
+[tool.ruff.lint.flake8-annotations]
 allow-star-arg-any = false
 ignore-fully-untyped = false
 [tool.ruff.format]

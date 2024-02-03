@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "PyDebug: Current File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
@@ -12,7 +12,7 @@
         },
         {
             "name": "PyDebug: Main File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
