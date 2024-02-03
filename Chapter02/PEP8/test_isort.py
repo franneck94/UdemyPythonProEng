@@ -1,4 +1,4 @@
-import os  # noqa: F401, I001
+import os  # noqa: F401
 import sys  # noqa: F401
 
 import numpy  # noqa: ICN001, F401

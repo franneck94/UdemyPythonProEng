@@ -36,7 +36,7 @@ class Vector2D:
             str: The representation of the instance.
         """
         print("Calling the __call__ function!")
-        return self.__repr__()  # noqa: PLC2801
+        return self.__repr__()
 
     def __repr__(self) -> str:
         """Return the instance representation.

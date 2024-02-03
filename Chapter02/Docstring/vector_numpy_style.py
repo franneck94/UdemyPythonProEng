@@ -1,4 +1,4 @@
-# pylint: disable=invalid-name
+# ruff: noqa: ANN204, ANN001, ANN201
 from functools import total_ordering
 from math import sqrt
 
@@ -28,7 +28,7 @@ class Vector2D:
 
     def __call__(self):
         print("Calling the __call__ function!")
-        return self.__repr__()  # noqa: PLC2801
+        return self.__repr__()
 
     def __repr__(self):
         return f"vector.Vector2D({self.x}, {self.y})"

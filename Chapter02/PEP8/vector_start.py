@@ -1,3 +1,4 @@
+# ruff: noqa: ANN204, ANN001
 import numbers
 from functools import total_ordering
 from math import sqrt

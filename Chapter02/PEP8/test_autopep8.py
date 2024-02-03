@@ -1,3 +1,4 @@
+# ruff: noqa: ANN204, ANN001, ANN201
 import math
 import sys
 

@@ -1,4 +1,3 @@
-# pylint: disable=import-error
 import sys
 
 from vector import Vector2D

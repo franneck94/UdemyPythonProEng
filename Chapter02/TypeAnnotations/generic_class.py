@@ -1,4 +1,5 @@
 from logging import Logger
+from logging import getLogger
 from typing import Generic
 from typing import TypeVar
 
@@ -25,8 +26,8 @@ class LoggedVar(Generic[T]):
 
 
 def main() -> None:
-    lv1 = LoggedVar(1, "Jan", Logger("a"))
-    lv2 = LoggedVar(1.0, "Jan", Logger("b"))
+    lv1 = LoggedVar(1, "Jan", getLogger("a"))
+    lv2 = LoggedVar(1.0, "Jan", getLogger("b"))
     print(lv1)
     print(lv2)
 

@@ -37,9 +37,71 @@ indent-width = 4
 extend-exclude = ["docs", "test", "tests"]
 [tool.ruff.lint]
 select = ["F", "E"]
-extend-select = ["C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "TRIO", "S", "BLE", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "PD", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FURB", "LOG", "RUF"]
-ignore = ["ANN101", "ANN102", "I001", "NPY002", "INP001", "TRY003", "ISC001", "COM812"]
-fixable = ["C90", "I", "N", "UP", "YTT", "ANN", "ASYNC", "TRIO", "S", "BLE", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "PD", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FURB", "LOG", "RUF"]
+extend-select = [
+    "C90",
+    "I",
+    "N",
+    "UP",
+    "YTT",
+    "ANN",
+    "ASYNC",
+    "TRIO",
+    "S",
+    "BLE",
+    "B",
+    "A",
+    "COM",
+    "C4",
+    "DTZ",
+    "T10",
+    "DJ",
+    "EM",
+    "EXE",
+    "FA",
+    "ISC",
+    "ICN",
+    "G",
+    "INP",
+    "PIE",
+    "PYI",
+    "PT",
+    "Q",
+    "RSE",
+    "RET",
+    "SLOT",
+    "SIM",
+    "TID",
+    "TCH",
+    "INT",
+    "ARG",
+    "PTH",
+    "PD",
+    "PL",
+    "TRY",
+    "FLY",
+    "NPY",
+    "AIR",
+    "PERF",
+    "FURB",
+    "LOG",
+    "RUF",
+]
+ignore = [
+    "ANN101",
+    "ANN102",
+    "I001",
+    "NPY002",
+    "INP001",
+    "TRY003",
+    "ISC001",
+    "COM812",
+    "EM101",
+    "ANN401",
+    "S311",
+    "PLW1641",
+    "N999",
+]
+fixable = ["ALL"]
 
 unfixable = []
 preview = true
