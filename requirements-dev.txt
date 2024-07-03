@@ -19,7 +19,6 @@ pre-commit>=3.6.0
 # Type Checker
 mypy>=1.8.0
 mypy-extensions>=1.0.0
-pyright>=1.1.349
 
 # Testing
 pytest>=8.0.0
